@@ -1,0 +1,111 @@
+/* YOUR CUSTOM STYLES */
+
+.margin-bottom {
+    margin-bottom: 40px;
+}
+.fullscreen {
+    width: 100%!important;
+}
+.productImg {
+    height: 150px;
+    max-width: 250px;
+}
+
+/* YOUR CUSTOM STYLES */
+
+.padding-top{
+  padding-top: 40px;
+}
+
+/*Campo fomulario inativo*/
+input[type=text],
+input[type=password],
+input[type=email],
+input[type=url],
+input[type=time],
+input[type=date],
+input[type=datetime-local],
+input[type=tel],
+input[type=number],
+input[type=search-md],
+textarea.md-textarea {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  border-radius: 0;
+  outline: none;
+  height: 2.1rem;
+  width: 100%;
+  font-size: 1rem;
+  box-shadow: none;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  transition: all .3s;
+}
+
+/*Campo carmpo ativo borda inferior*/
+input[type=text]:focus:not([readonly]),
+input[type=password]:focus:not([readonly]),
+input[type=email]:focus:not([readonly]),
+input[type=url]:focus:not([readonly]),
+input[type=time]:focus:not([readonly]),
+input[type=date]:focus:not([readonly]),
+input[type=datetime-local]:focus:not([readonly]),
+input[type=tel]:focus:not([readonly]),
+input[type=number]:focus:not([readonly]),
+input[type=search-md]:focus:not([readonly]),
+textarea.md-textarea:focus:not([readonly]) {
+  border-bottom: 1px solid #1C2331;
+  box-shadow: 0 1px 0 0 #1C2331;
+}
+
+/*Cor do label inativo*/
+.md-form label {
+  color: #757575;
+  position: absolute;
+  top: 0.8rem;
+  left: 0;
+  font-size: 1rem;
+  cursor: text;
+  -webkit-transition: 0.2s ease-out;
+  -moz-transition: 0.2s ease-out;
+  -o-transition: 0.2s ease-out;
+  -ms-transition: 0.2s ease-out;
+  transition: 0.2s ease-out;
+}
+
+/*Cor do label ativo*/
+input[type=text]:focus:not([readonly]) + label,
+input[type=password]:focus:not([readonly]) + label,
+input[type=email]:focus:not([readonly]) + label,
+input[type=url]:focus:not([readonly]) + label,
+input[type=time]:focus:not([readonly]) + label,
+input[type=date]:focus:not([readonly]) + label,
+input[type=datetime-local]:focus:not([readonly]) + label,
+input[type=tel]:focus:not([readonly]) + label,
+input[type=number]:focus:not([readonly]) + label,
+input[type=search-md]:focus:not([readonly]) + label,
+textarea.md-textarea:focus:not([readonly]) + label {
+  color: #1C2331;
+}
+
+/*Cor cabeçalho tabela*/
+.thead-inverse th {
+  color: #fff;
+  background-color: #1C2331;
+}
+
+/*Botão arredondado*/
+.btn-rounded{
+  border-radius: 20px;
+}
+
+/* Font Corpo Bootstrap */
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #373a3c;
+  background-color: #fff;
+}
