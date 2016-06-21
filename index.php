@@ -10,7 +10,7 @@
 		</div>
 
 	<div class="col-md-2">
-		<a class="btn btn-success-outline waves-effect btn-rounded" href="https://github.com/renanslopes8/back_end-php-MDB-loja"
+		<a class="btn btn-success-outline waves-effect btn-rounded" href="https://github.com/renanslopes8/back_end-php-academic-market"
 		 target="_blank">
 			Código do Projeto
 		</a>
