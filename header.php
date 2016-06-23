@@ -6,7 +6,13 @@
     <link rel="stylesheet" href="css/bootstrap.css" charset="utf-8">
     <link rel="stylesheet" href="css/mdb.css" charset="utf-8">
     <link rel="stylesheet" href="css/style.css" media="screen" title="no title" charset="utf-8">
-    <?php require_once ('UsuarioController.php'); ?>
+    <?php
+      require_once ('UsuarioController.php');
+      require_once ('AlertaController.php');
+    ?>
+    <?php
+      error_reporting(E_ALL ^ E_NOTICE);
+    ?>
   </head>
   <body>
     <header>
@@ -34,8 +40,15 @@
                     <a href="categoria-form-adiciona.php" class="dropdown-item">Adiciona Categoria</a>
                   </div>
               </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="contato-form-email.php">Contato</a>
+              </li>
               <li>
-                <div class="col-md-6">
+                <div class="col-md-5">
+                  <?php
+                    mostraAlertaNav("success");
+                    mostraAlertaNav("danger");
+                  ?>
                   <?php
                     if(isset($_SESSION['usuario_logado'])){
                   ?>
@@ -45,26 +58,7 @@
                   <?php
                     };
                   ?>
-                  <?php
-                    if (isset($_SESSION["danger"])) {
-                  ?>
-                      <li class="nav-item">
-                        <a href="#" class="white-text nav-link"><?=$_SESSION['danger']?></a>
-                      </li>
-                  <?php
-                      unset($_SESSION["danger"]);
-                    };
-                  ?>
-                  <?php
-                    if (isset($_SESSION["logout"])) {
-                  ?>
-                      <li class="nav-item">
-                        <a href="#" class="white-text nav-link"><?=$_SESSION['logout']?></a>
-                      </li>
-                  <?php
-                      unset($_SESSION["logout"]);
-                    };
-                  ?>
+
                 </div>
               </li>
             </ul>

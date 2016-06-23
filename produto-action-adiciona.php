@@ -3,7 +3,6 @@
     verificaUsuario();
 ?>
 <?php
-  require_once("connection.php");
   require_once("ProdutoDAO.php");
   require_once("header.php");
 ?>

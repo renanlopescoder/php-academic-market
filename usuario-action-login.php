@@ -1,6 +1,5 @@
 <?php
   require_once('UsuarioController.php');
-  require_once("connection.php");
   require_once("UsuarioDAO.php");
   $usuario = buscaUsuario ($conexao, $_POST['email'], $_POST['senha']);
 
@@ -10,6 +9,5 @@
   };
   if ($usuario != null) {
     login($usuario['email']);
-    $SESSION['success'] = 'Logado com sucesso';
     header("Location: index.php");
   };

@@ -1,23 +1,27 @@
 ![php-logo](http://renanslopes8.com.br/projetosgit/readme-img/php_cloud_back_end.png)
 
-#back_end-php-academic-market
+#PHP Academic Market
 
-Projeto de sistema com cadastro de produtos de uma loja, desenvolvido em PHP no Beck-End, banco de dados MySQL, usado Framework MDB a mesma utiliza conceitos e layout de materials para bootstrap além de incluir recursos de animação com wow.js tudo incluso nesta framework, também usado framework JavaScript jQuery no Front-End.
+back_end-php-academic-market é um projeto de sistema com cadastro e controle de produtos, desenvolvido em PHP (Beck-End), banco de dados MySQL, FrameworkCSS MDB customizada, wow.js para animações e jQuery.
 
 ##Tecnologia usada no sistema
 
 - PHP
-- jQuery JavaScript Framework
-- MDB Framework (Incluso Materials para Bootstrap no CSS e wow.js para as animações)
+- jQuery
+- Bootstrap
+- MDB Framework (Customizada)
+- wow.js
 
 ##Recursos do Projeto
 
-- Formulário de Cadastro de produtos.
-- Lista de Produtos.
-- Formulário para Alterar Produto.
+- Formulário para Cadastro e alteração de produtos.
+- Formulário para cadastro de categorias.
+- Lista de Produtos inteligente, alerta o usuário que há produtos com a quantidade em estoque menor que o estoque mínimo facilitando o controle de estoque.
 - Remoção de Produtos.
-- Sistema de Login com segurança usando session e criptografia md5 para o armazenamento das senhas.
-- Lógica de proteção dos formulário e ações de acesso ao banco apenas para usuários logado no sistema.
+- Sistema de Login com segurança usando session, criptografia md5 para o armazenamento das senhas e segurança contra SQL Injection.
+- Lógica de proteção dos formulário e ações de acesso ao banco apenas para usuários logados no sistema.
+- Controle de erros
+- Envio de E-mail para contato com PHP Mailer
 
 ###Usuário e senha de acesso
 
@@ -49,22 +53,29 @@ Como servidor PHP, MySQL e Apache podemos usar o MAMP Free (https://www.mamp.inf
 
 #####English
 
-System Design with registration of products in a store, developed in PHP in Beck End, MySQL database, used Framework MDB uses the same concepts and materials layout for bootstrap and includes animation features with wow.js all included in this framework, also used jQuery JavaScript framework in the Front End.
+
+#PHP Academic Market
+
+back_end-php-academic-market is a system design with registration and control products, developed in PHP (Beck End ) , MySQL database, FrameworkCSS custom MDB , wow.js for animations and jQuery.
 
 ## The technology used in the system
 
 - PHP
-- JQuery JavaScript Framework
-- MDB Framework (Included Materials to Bootstrap CSS and wow.js for animations)
+- jQuery
+- Bootstrap
+- MDB Framework ( Custom )
+- wow.js
 
 ## Project Resources
 
-- Form Product Registration.
-- Product list.
-- Form for Change Product.
+- Form for Registration and alteration products .
+- Form for registration categories.
+- List of intelligent products, alerts the user that there are products with stock quantity less than the minimum stock facilitating inventory control.
 - Product Removal.
-- Login System safely with session and md5 encryption for storing passwords.
-- Protection logic of form and database access actions only to users logged in.
+- Login System safely with session , md5 encryption for storage of passwords and security against SQL Injection .
+- Protection logic of form and database access actions only to users logged into the system.
+- Error control
+- Sending E- mail contact with PHP Mailer
 
 ### User and password
 

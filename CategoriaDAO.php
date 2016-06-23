@@ -1,4 +1,6 @@
 <?php
+  require_once("connection.php");
+  
   function listaCategorias ($conexao) {
     $categorias       = array();
     $resultado        = mysqli_query($conexao,"select * from categorias");
@@ -9,6 +11,7 @@
   };
 
   function insereCategoria ($conexao, $categoria) {
+    $categoria = mysqli_real_escape_string($conexao,$categoria);
     $query = "insert into categorias set nome='{$categoria}'";
     return mysqli_query ($conexao,$query);
   };

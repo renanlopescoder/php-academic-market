@@ -1,7 +1,7 @@
 <?php
   require_once ("header.php");
-  require_once ("connection.php");
   require_once ("ProdutoDAO.php");
+  require_once ("AlertaController.php");
 ?>
 <div class="padding-top">
 <div class="row">
@@ -9,18 +9,7 @@
     <h2 class="animated fadeInUp margin-bottom">Lista de Produtos</h2>
   </div>
 </div>
-<?php
-  if (isset($_SESSION["success"])) {
-?>
-<div>
-  <div class="row text-md-center">
-    <p class="text-success"><?=$_SESSION['success']?></p>
-  </div>
-</div>
-<?php
-    unset($_SESSION["success"]);
-  };
-?>
+<?php mostraAlerta("info"); ?>
 <table class="table table-striped table-bordered padding-top animated fadeInUp margin-bottom">
   <thead class="thead-inverse">
     <tr>
