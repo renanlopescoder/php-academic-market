@@ -4,14 +4,16 @@
 ?>
 <?php
   require_once ("header.php");
+  require_once ("model/Produto.php");
   require_once ("ProdutoDAO.php");
   require_once ("CategoriaDAO.php");
 ?>
 <?php
-  $categorias = listaCategorias($conexao);
-  $id         = $_GET['id'];
-  $produto    = buscaProduto($conexao,$id);
-  $usado      = $produto['usado'] ? "checked='checked'" : ""; //Operador ternário verificando se produto é usado
+  $produto     = new Produto();
+  $categorias  = listaCategorias($conexao);
+  $produto->id = $_GET['id'];
+  $produto     = buscaProduto($conexao,$produto);
+  $usado       = $produto->usado ? "checked='checked'" : ""; //Operador ternário verificando se produto é usado
 ?>
 <div class="padding-top">
   <div class="container">
@@ -24,7 +26,7 @@
     </div>
     <form class="form-horizontal wow fadeInRight" action="produto-action-altera.php" method="POST">
       <fieldset>
-        <input type="hidden" name="id" value="<?=$produto['id']?>">
+        <input type="hidden" name="id" value="<?=$produto->id?>">
         <?php require_once('produto-form-base.php'); ?>
         <div class="row">
           <div class="form-group">

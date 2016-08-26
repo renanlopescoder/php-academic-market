@@ -22,7 +22,7 @@
         </button>
         <div class="container-fluid">
           <div class="collapse navbar-toggleable-xs" id="collapseEx2">
-            <a class="navbar-brand" href="#">Academic PHP</a>
+            <a class="navbar-brand" href="#"><img src="img/logo.png"></a>
             <ul class="nav navbar-nav">
               <li class="nav-item">
                   <a class="nav-link" href="index.php">Home</a>
@@ -38,6 +38,7 @@
                 <a class="nav-link dropdown-toggle" type="button" data-toggle="dropdown">Categorias</a>
                   <div class="dropdown-menu">
                     <a href="categoria-form-adiciona.php" class="dropdown-item">Adiciona Categoria</a>
+                    <a href="categoria-listar.php" class="dropdown-item">Lista Categoria</a>
                   </div>
               </li>
               <li class="nav-item">

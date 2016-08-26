@@ -2,7 +2,7 @@
 
 #PHP Academic Market
 
-back_end-php-academic-market é um projeto de sistema com cadastro e controle de produtos, desenvolvido em PHP (Back-End), banco de dados MySQL, FrameworkCSS MDB customizada, wow.js para animações e jQuery.
+back_end-php-academic-market é um projeto de sistema com cadastro e controle de produtos, desenvolvido em PHP (Beck-End), banco de dados MySQL, FrameworkCSS MDB customizada, wow.js para animações e jQuery.
 
 ##Tecnologia usada no sistema
 
@@ -56,7 +56,7 @@ Como servidor PHP, MySQL e Apache podemos usar o MAMP Free (https://www.mamp.inf
 
 #PHP Academic Market
 
-back_end-php-academic-market is a system design with registration and control products, developed in PHP (Back End ) , MySQL database, FrameworkCSS custom MDB , wow.js for animations and jQuery.
+back_end-php-academic-market is a system design with registration and control products, developed in PHP (Beck End ) , MySQL database, FrameworkCSS custom MDB , wow.js for animations and jQuery.
 
 ## The technology used in the system
 

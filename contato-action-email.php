@@ -12,15 +12,16 @@ $mensagem = $_POST["mensagem"];
 
 //Usando envio de email com SMTP
 $mail->isSMTP();
-$mail->Host = 'smtp.gmail.com';
-$mail->Port = 587;
-$mail->SMTPSecure = 'tls';
+$mail->Mailer = 'smtp.hostinger.com.br';
+$mail->Host = 'ssl://smtp.gmail.com';
+$mail->Port = 465;
+$mail->SMTPSecure = 'ssl';
 $mail->SMTPAuth = true;
 
 //Configurando nome de usuário e senha
 
 $mail->Username = "renanslopes8@gmail.com";
-$mail->Password = "";
+$mail->Password = "hprtjrencrs123";
 
 //Configuração de quem está enviando e quem receberá o E-mail
 //DE:

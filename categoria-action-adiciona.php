@@ -4,17 +4,19 @@
 ?>
 <?php
   require_once ('header.php');
+  require_once ("model/Categoria.php");
   require_once ("CategoriaDAO.php");
 ?>
 <?php
-  $nome = $_POST['nome'];
-  if (insereCategoria($conexao,$nome)) {
+  $categoria = new Categoria();
+  $categoria->nome = $_POST['nome'];
+  if (insereCategoria($conexao,$categoria)) {
 ?>
 
 <div class="row">
   <div class="col-md-12 text-center padding-top">
     <p class="text-success">
-      Categoria <?php echo $nome;?> adicionada
+      Categoria <?php echo $categoria->nome;?> adicionada
     </p>
   </div>
 </div>
@@ -27,7 +29,7 @@
 <div class="row">
   <div class="col-md-12 text-center padding-top">
     <p class="text-danger">
-      Categoria: <?php echo $nome;?> não pode ser adicionado<br>
+      Categoria: <?php echo $categoria->nome;?> não pode ser adicionado<br>
       Erro: <?php echo $msg?>
     </p>
   </div>

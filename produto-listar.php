@@ -1,5 +1,6 @@
 <?php
   require_once ("header.php");
+  require_once ("model/Produto.php");
   require_once ("ProdutoDAO.php");
   require_once ("AlertaController.php");
 ?>
@@ -31,44 +32,44 @@
       foreach($produtos as $produto){
     ?>
       <?php
-        $produto['quantidade'] < $produto['estoque_minimo'] ? $status = 'table-danger' : '';
-        $produto['quantidade'] == $produto['estoque_minimo'] ? $status = 'table-warning' : '';
+        $produto->quantidade < $produto->estoque_minimo ? $status = 'table-danger' : '';
+        $produto->quantidade == $produto->estoque_minimo ? $status = 'table-warning' : '';
       ?>
       <tr class="<?=$status?>">
         <td>
-          <?=$produto['id'];?>
+          <?=$produto->id;?>
         </td>
         <td>
-          <?=$produto['nome'];?>
+          <?=$produto->nome;?>
         </td>
         <td>
-          <?=substr($produto['descricao'],0 , 40);?>
+          <?=substr($produto->descricao,0 , 40);?>
         </td>
         <td class="text-md-center">
-          <?=$produto['quantidade'];?>
+          <?=$produto->quantidade;?>
         </td>
         <td class="text-md-center">
-          <?=$produto['estoque_minimo'];?>
+          <?=$produto->estoque_minimo;?>
         </td>
         <td>
           <?php
-            $produto['usado'] == 1 ? $usado = 'Usado' : '';
-            $produto['usado'] == 0 ? $usado = 'Novo' : '';
+            $produto->usado == 1 ? $usado = 'Usado' : '';
+            $produto->usado == 0 ? $usado = 'Novo' : '';
           ?>
           <?=$usado?>
         </td>
         <td>
-          R$ <?=$produto['preco'];?>
+          R$ <?=$produto->preco;?>
         </td>
         <td>
-          <?=$produto['categoria'];?>
+          <?=$produto->categoria->nome;?>
         </td>
         <td>
-          <a class="btn btn-primary-outline btn-rounded" href="produto-form-altera.php?id=<?=$produto['id']?>">Alterar</a>
+          <a class="btn btn-primary-outline btn-rounded" href="produto-form-altera.php?id=<?=$produto->id?>">Alterar</a>
         </td>
         <td>
           <form class="valign-center" action="produto-action-remove.php" method="post">
-            <input type="hidden" name="id" value="<?=$produto['id']?>">
+            <input type="hidden" name="id" value="<?=$produto->id?>">
             <button class="btn btn-danger-outline btn-rounded">Remover</button>
           </form>
         </td>

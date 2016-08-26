@@ -4,7 +4,11 @@
 ?>
 <?php
   require_once ("header.php");
+  require_once ("model/Categoria.php");
   require_once ("CategoriaDAO.php");
+  $categoria = new Categoria();
+  $categoria->id  = $_GET['id'];
+  $categoria      = buscaCategoria($conexao,$categoria);
 ?>
 
 <div class="padding-top">
@@ -12,17 +16,18 @@
     <div class="row">
       <div class="col-md-12">
         <h1 class="wow fadeInRight" data-wow-duration=".75s">Formulário</h1>
-        <h1 class="wow fadeInRight" data-wow-duration="1.25s">Adiciona Categoria</h1>
+        <h1 class="wow fadeInRight" data-wow-duration="1.25s">Altera Categoria</h1>
         <br>
       </div>
     </div>
-    <form class="form-horizontal wow fadeInRight" action="categoria-action-adiciona.php" method="POST">
+    <form class="form-horizontal wow fadeInRight" action="categoria-action-altera.php" method="POST">
       <fieldset>
         <div class="row">
         <div class="col-md-1"></div>
         <div class="col-md-5 wow fadeInRight" data-wow-duration="1.25s">
           <div class="md-form">
-            <input id="inputNome" type="text" class="form-control" name="nome">
+            <input type="hidden"  name="id" value="<?= $categoria->id ?>">
+            <input id="inputNome" type="text" class="form-control" name="nome" value="<?= $categoria->nome ?>">
             <label for="inputNome" class="">Nome da Categoria</label>
           </div>
         </div>
